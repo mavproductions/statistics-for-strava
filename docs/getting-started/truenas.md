@@ -36,7 +36,7 @@ services:
     restart: unless-stopped
     volumes:
       - /mnt/POOLHERE/path/to/statistics-for-strava/build:/var/www/build
-      - /mnt/POOLHERE//path/to/statistics-for-strava/storage/database:/var/www/storage/database
+      - /mnt/POOLHERE/path/to/statistics-for-strava/storage/database:/var/www/storage/database
       - /mnt/POOLHERE/path/to/statistics-for-strava/storage/files:/var/www/storage/files
       - /mnt/POOLHERE/path/to/statistics-for-strava/storage/gear-maintenance:/var/www/storage/gear-maintenance
       - /mnt/POOLHERE/path/to/statistics-for-strava/config:/var/www/config/app
