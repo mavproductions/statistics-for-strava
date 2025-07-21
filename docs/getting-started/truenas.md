@@ -15,7 +15,7 @@ Thanks to <a href="https://github.com/mavproductions" target="_blank">mavproduct
 
 On the Datasets page, create your new Dataset residing in your primary disk pool.
 Call it statistics-for-strava with the apps preset. After that, create child datasets for build, config, and storage.
-![Datasets](image.png)
+![Datasets](../assets/images/truenas-datasets.png)
 
 ### Stage your .ENV and config.yaml
 Create the following files in your datasets using the examples [provided here](https://statistics-for-strava-docs.robiningelbrecht.be/#/getting-started/installation?id=env):
@@ -62,7 +62,7 @@ Restart the statistics-for-strava app.
 
 ### Create cron schedules
 Navigate to `TrueNAS > System > Advanced Settings > Cron Jobs` and add `docker exec strava-statistics bin/console app:strava:import-data && docker compose exec app bin/console app:strava:build-files` as the command, running as root user.
-![Cron Job on TrueNAS](image-1.png)
+![Cron Job on TrueNAS](../assets/images/truenas-cron.png)
 
 ### Fix your TrueNAS app listing:
 From TrueNAS Shell, navigate to run `sudo nano /mnt/.ix-apps/app_configs/statistics-for-strava/metadata.yaml` and use below as a template:
@@ -93,7 +93,7 @@ version: 1.0.0
 
 After you save(CTRL+O) your nano session, on the apps page, select statistics-for-strava, click the grey Edit button near "Application Info", and click the blue save button. This not only updates the docker-compose contents, but also propagates the `metadata.yaml` changes. You might also need to use CTRL+SHIFT+R to force a refresh of your TrueNAS Apps page.
 
-![Application Info](image-2.png)
+![Application Info](../assets/images/truenas-appmeta.png)
 
 <div class="alert success">
 You're all set :partying_face:! You can now <a href="/#/getting-started/installation?id=import-and-build-statistics">import and build</a> your statistics. 
