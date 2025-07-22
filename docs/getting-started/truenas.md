@@ -61,7 +61,7 @@ Restart the statistics-for-strava app.
 * Restart your TrueNAS App
 
 ### Create cron schedules
-Navigate to `TrueNAS > System > Advanced Settings > Cron Jobs` and add `docker exec strava-statistics bin/console app:strava:import-data && docker compose exec app bin/console app:strava:build-files` as the command, running as root user.
+Navigate to `TrueNAS > System > Advanced Settings > Cron Jobs` and add `docker exec strava-statistics bin/console app:strava:import-data && docker exec strava-statistics bin/console app:strava:build-files` as the command, running as root user.
 ![Cron Job on TrueNAS](../assets/images/truenas-cron.png)
 
 ### Fix your TrueNAS app listing:
